@@ -1,0 +1,198 @@
+/* Farbverläufe und Grundfarben */
+:root {
+    --gold-gradient: linear-gradient(135deg, #f1c40f, #d4ac0d);
+    --black: #000000;
+    --white: #ffffff;
+    --gold: #d4ac0d;
+}
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--black);
+    background-color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header-logo {
+    width: 240px; /* Doppelte Größe */
+}
+
+/* Hero Section mit Video-Hintergrund */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Über uns Section */
+.about-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: var(--black);
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.call-button {
+    padding: 15px 40px; /* Größerer Button */
+    font-size: 1.2rem;
+    background: var(--gold-gradient);
+    color: var(--black);
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.call-button:hover {
+    background: #c29d0b;
+}
+
+/* Services Section */
+.options-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.options-section h2 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 40px;
+}
+
+.service-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.option-item {
+    max-width: 250px;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    padding: 20px;
+    background: var(--gold-gradient);
+    color: var(--black); /* Textfarbe auf Schwarz geändert */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option-item:hover {
+    transform: scale(1.05);
+}
+
+.option-icon {
+    width: 100px; /* Icon-Größe erhöht */
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.option-item h3 {
+    font-size: 1.5rem;
+    color: var(--black); /* Überschrift in Schwarz */
+    margin-bottom: 10px;
+}
+
+.option-item p {
+    color: var(--black); /* Text in Schwarz */
+    font-size: 1rem;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo-img {
+    width: 120px;
+}
+
+.footer-links a {
+    color: var(--black);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: var(--black);
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 768px) {
+    .about-section h2,
+    .options-section h2 {
+        font-size: 2rem;
+    }
+
+    .option-item {
+        max-width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
